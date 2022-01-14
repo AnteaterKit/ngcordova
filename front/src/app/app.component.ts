@@ -11,7 +11,7 @@ export class AppComponent {
   start() {
     try {
       const w = window as any;
-      w.cordova.plugins.Replay.startRecording(true,
+      w.cordova.plugins.Replay.startBroadcast(
         () => {
           this.p = ' start';
         }, () => {
