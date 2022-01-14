@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngcordova';
+  p = 'not ready';
+  start() {
+    try {
+      const w = window as any;
+      w.cordova.plugins.Replay.startRecording(true,
+        () => {
+          this.p = ' start';
+        }, () => {
+          this.p = ' error';
+        }
+      );
+    } catch(e: any) {
+      this.p = e;
+    }
+  }
 }

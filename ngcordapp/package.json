@@ -14,12 +14,16 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-browser": "^6.0.0",
-    "cordova-ios": "^6.2.0"
+    "cordova-ios": "^6.2.0",
+    "cordova-replay": "^0.0.5"
   },
   "cordova": {
     "platforms": [
       "browser",
       "ios"
-    ]
+    ],
+    "plugins": {
+      "cordova-replay": {}
+    }
   }
 }
