@@ -9,8 +9,10 @@ export class AppComponent {
   title = 'ngcordova';
   p = 'not ready';
   start() {
+    const w = window as any;
+    console.log('plugins.Replay.startBroadcast ', w.cordova.plugins);
     try {
-      const w = window as any;
+      
       w.cordova.plugins.Replay.startBroadcast(
         () => {
           this.p = ' start';
