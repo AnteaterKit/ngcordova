@@ -1,0 +1,14 @@
+{
+  "name": "ez-screencast",
+  "version": "0.0.1",
+  "description": "webrtc screencast",
+  "cordova": {
+    "id": "cordova-plugin-screencast",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Aleksandr Shatilov",
+  "license": "MIT"
+}

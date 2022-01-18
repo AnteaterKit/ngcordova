@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-screencast" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ScreenCast</name>
+    <js-module name="ScreenCast" src="www/ScreenCast.js">
+        <clobbers target="cordova.plugins.ScreenCast" />
+    </js-module>
+
+    <platform name="ios">
+        <hook type="after_plugin_add" src="hooks/setswiftversion.js" />
+        <config-file parent="/*" target="config.xml">
+            <feature name="ScreenCast">
+                <param name="ios-package" value="ScreenCast"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/cordova-screencast-Bridging-Header.h"/>
+        <source-file src="src/ios/CDVCordovaScreencast.swift"/>
+        <framework src="ReplayKit.framework" />
+        <framework src="UIKit.framework" />
+    </platform>
+
+</plugin>
