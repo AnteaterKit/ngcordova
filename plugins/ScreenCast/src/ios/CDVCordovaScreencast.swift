@@ -7,7 +7,7 @@ class BroadcastController : RPBroadcastController {
     static let controller = BroadcastController()
 }
 
-@objc(CordovaReplay) class CordovaReplay : RPBroadcastSampleHandler, CDVPlugin, RPScreenRecorderDelegate, RPPreviewViewControllerDelegate, RPBroadcastActivityViewControllerDelegate {
+@objc(ScreenCast) class ScreenCast : RPBroadcastSampleHandler, CDVPlugin, RPScreenRecorderDelegate, RPPreviewViewControllerDelegate, RPBroadcastActivityViewControllerDelegate {
     
     weak var previewViewController: RPPreviewViewController?
     var CDVWebview:UIWebView;

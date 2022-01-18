@@ -24,4 +24,21 @@ export class AppComponent {
       this.p = e;
     }
   }
+
+  startMy() {
+    const w = window as any;
+    console.log('plugins.Replay ', w.cordova.plugins);
+    try {
+      
+      w.cordova.plugins.ScreenCast.startBroadcast(
+        () => {
+          this.p = ' start';
+        }, () => {
+          this.p = ' error';
+        }
+      );
+    } catch(e: any) {
+      this.p = e;
+    }
+  }
 }

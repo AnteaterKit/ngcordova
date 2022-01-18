@@ -1,9 +1,9 @@
 var exec = require('cordova/exec');
 
 var ScreenCast = {
-    startBroadcast: function (success, error, bufferHandler) {
-        exec(success, error, bufferHandler, "ScreenCast", "startBroadcast");
+    startBroadcast: function (success, error) {
+        exec(success, error, "ScreenCast", "startBroadcast");
     },
 }
 
-module.exports = Replay;
+module.exports = ScreenCast;
