@@ -1,6 +1,6 @@
 {
   "name": "ez-screencast",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "webrtc screencast",
   "cordova": {
     "id": "cordova-plugin-screencast",
