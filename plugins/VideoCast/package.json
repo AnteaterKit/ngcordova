@@ -1,0 +1,14 @@
+{
+  "name": "ez-videocast",
+  "version": "0.0.1",
+  "description": "webrtc videocast",
+  "cordova": {
+    "id": "cordova-plugin-videocast",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Aleksandr Shatilov",
+  "license": "MIT"
+}

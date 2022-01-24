@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-videocast" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>VideoCast</name>
+    <js-module name="VideoCast" src="www/VideoCast.js">
+        <clobbers target="cordova.plugins.VideoCast" />
+    </js-module>
+
+    <platform name="ios">
+        <hook type="after_plugin_add" src="hooks/setswiftversion.js" />
+        <config-file parent="/*" target="config.xml">
+            <feature name="VideoCast">
+                <param name="ios-package" value="VideoCast"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/cordova-videocast-Bridging-Header.h"/>
+        <source-file src="src/ios/CDVCordovaVideoCast.swift"/>
+        <framework src="ReplayKit.framework" />
+        <framework src="UIKit.framework" />
+    </platform>
+
+</plugin>
